@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Norman Hill Dyer</title>
+    <meta name="description" content="In memory of Norman Hill Dyer, 1931 - 2025.">
+
+    <meta property="og:title" content="Norman Hill Dyer">
+    <meta property="og:description" content="1931 - 2025">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="parents-walking.jpg">
+
+    <link rel="icon" href="data:,">
+    <style>
+      :root {
+        /* Sampled from the photograph: #517e61 canopy, #568a63 lit green,
+           #99b0c5 the path. Deeper up top, paling toward the bottom. */
+        --bg-top: #9fb8a8;
+        --bg-bottom: #dae4dd;
+        --ink: #2b4435;
+        --shadow: 26, 52, 36;
+        --card: #f9f7f1;
+      }
+
+      * { box-sizing: border-box; }
+
+      html, body {
+        margin: 0;
+      }
+
+      body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1.5rem;
+        min-height: 100vh;
+        min-height: 100dvh; /* accounts for mobile browser chrome */
+        padding: 2.5rem 1.25rem;
+        /* Dappled light drifting across the page, repeating horizontally only.
+           It sits behind the card, so the texture reads around the photograph,
+           never over it. */
+        background-image: url('dapple.png'),
+                          linear-gradient(to bottom, var(--bg-top), var(--bg-bottom));
+        background-repeat: repeat-x, no-repeat;
+        background-position: center 72%, center;
+        color: var(--ink);
+        font-family: Georgia, "Iowan Old Style", "Times New Roman", serif;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      .card {
+        max-width: min(430px, 100%);
+        padding: 1.5rem 1.5rem 1.75rem;
+        background: var(--card);
+        border-radius: 4px;
+        box-shadow:
+          0 1px 2px rgba(var(--shadow), 0.12),
+          0 18px 48px rgba(var(--shadow), 0.28);
+        text-align: center;
+        animation: rise 1.4s ease-out both;
+      }
+
+      .photo {
+        display: block;
+        width: 100%;
+        max-height: min(56vh, 560px);
+        object-fit: contain;
+        margin: 0 auto;
+        border: 1px solid rgba(var(--shadow), 0.28);
+      }
+
+      .name {
+        margin: 1.25rem 0 0;
+        font-family: Helvetica, Arial, sans-serif;
+        font-size: 1.4rem;
+        font-weight: 500;
+        letter-spacing: 0.01em;
+        color: #333;
+      }
+
+      .dates {
+        margin: 0.4rem 0 0;
+        font-family: Helvetica, Arial, sans-serif;
+        font-size: 0.9375rem;
+        color: #555;
+      }
+
+      .rule {
+        width: 62%;
+        margin: 1.1rem auto 0;
+        border: 0;
+        border-top: 1px solid rgba(var(--shadow), 0.22);
+      }
+
+      footer {
+        max-width: 34rem;
+        text-align: center;
+        line-height: 1.7;
+        animation: rise 1.4s ease-out 0.35s both;
+      }
+
+      footer p {
+        margin: 0;
+      }
+
+      .memory {
+        font-size: 1.25rem;
+        letter-spacing: 0.06em;
+        opacity: 0.85;
+      }
+
+      .contact {
+        margin-top: 1.1rem;
+        font-size: 0.9375rem;
+        letter-spacing: 0.01em;
+        opacity: 0.8;
+      }
+
+      footer a {
+        color: inherit;
+        text-decoration: underline;
+        text-underline-offset: 3px;
+      }
+
+      @keyframes rise {
+        from { opacity: 0; transform: translateY(14px); }
+        to   { opacity: 1; transform: translateY(0); }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .card, footer { animation: none; }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="card">
+      <img class="photo" src="parents-walking.jpg" alt="Norman Hill Dyer walking arm in arm with Cynthia Camille Miller Dyer along a wooded path, September 2010.">
+      <h1 class="name">Norman Hill Dyer</h1>
+      <p class="dates">1931 &ndash; 2025</p>
+      <hr class="rule">
+    </main>
+
+    <footer>
+      <p class="memory">In loving memory</p>
+      <p class="contact">
+        If you knew Norman and would like to stay in touch with the family,
+        we would love to hear from you. Please send us a note at
+        <a href="mailto:family@normanhilldyer.org?subject=Norman">family@normanhilldyer.org</a>.
+      </p>
+    </footer>
+  </body>
+</html>

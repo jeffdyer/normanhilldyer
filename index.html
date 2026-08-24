@@ -81,9 +81,11 @@
       }
 
       .dates {
-        margin: 0.4rem 0 0;
+        margin: 0.45rem 0 0;
         font-family: Helvetica, Arial, sans-serif;
-        font-size: 0.9375rem;
+        /* Matched to .name.second, so the primary dates sit at the same size
+           as the other parent's name below them. */
+        font-size: 1.05rem;
         color: #555;
       }
 
@@ -102,6 +104,9 @@
       }
 
       .dates.second-dates {
+        /* The other parent's dates stay at the old size, so enlarging the
+           primary line above does not drag this one up with it. */
+        font-size: 0.9375rem;
         color: #6b6b6b;
       }
 
